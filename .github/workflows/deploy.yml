@@ -40,9 +40,7 @@ jobs:
         run: npm run build
 
       - name: Generate static site
-        run: |
-          php please config:set app.url https://jessevaughan.github.io/hallie --env=production
-          php please ssg:generate
+        run: APP_URL=https://jessevaughan.github.io/hallie php please ssg:generate
 
       - name: Prevent Jekyll interference
         run: touch storage/app/static/.nojekyll
