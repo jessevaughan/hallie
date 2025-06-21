@@ -1,8 +1,8 @@
-name: Deploy Statamic Static Site to GitHub Pages
+name: Deploy Statamic SSG to GitHub Pages
 
 on:
   push:
-    branches: [main]  # or 'master' if that's your default
+    branches: [main]
 
 jobs:
   build:
@@ -12,17 +12,38 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up PHP
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
-          extensions: mbstring, xml, curl, zip, bcmath, intl, gd
+          php-version: '8.1'
+          extensions: mbstring, xml, curl, zip, bcmath, gd, intl
 
-      - name: Install dependencies
-        run: composer install --no-dev --optimize-autoloader
+      - name: Configure Git for deploy branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Install Composer dependencies (with plugins)
+        run: |
+          composer config --no-interaction allow-plugins.pixelfear/composer-dist-plugin true
+          composer install --no-dev --prefer-dist --optimize-autoloader
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install NPM dependencies
+        run: npm install
+
+      - name: Build frontend with Vite
+        run: npm run build
 
       - name: Generate static site
         run: php please ssg:generate
+
+      - name: Prevent Jekyll interference
+        run: touch storage/app/static/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
