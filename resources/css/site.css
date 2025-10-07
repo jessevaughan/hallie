@@ -1,30 +1,62 @@
 @source "../views";
 @source "../../content";
+
+/* Example with Jost */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&display=swap');
+
+.display-black {
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em; /* mimic Polymath Display’s tighter spacing */
+  text-transform: uppercase; /* optional, for that logo/poster feel */
+}
+
 body {
 	background: #FCF9F4;
+	font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
 }
 
 header {
 	text-align: center;
+	padding: 25px 0 0;
+}
+
+header img {
+	width: 150px;
+}
+
+header h1 {
+	display: none;
 }
 
 footer {
 	text-align: center;
+	padding: 0 0 25px;
 }
 
 footer ul {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 25px;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
 }
 
 footer ul li {
 	padding: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
 }
 
-footer ul li a {
+footer ul li img {
+	height: 75px;
+}
 
+footer ul li span {
+	display: none;
 }
 
 #content-home {
@@ -36,11 +68,85 @@ footer ul li a {
 	margin: 0 auto;
 }
 
+#content-home nav ul {
+	list-style: none;
+}
+
 #content-home nav a {
+ 	text-transform: uppercase;
+ 	display: inline-block;
+ 	margin: 15px 0;
+ 	position: relative;
+ 	font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em; /* mimic Polymath Display’s tighter spacing */
+  text-transform: uppercase; /* optional, for that logo/poster feel */
+  text-decoration: none;
+}
+
+#content-home nav a img {
  	text-transform: uppercase;
  	display: block;
  	font-size: 32px;
  	margin: 15px 0;
+ 	position: absolute;
+ 	z-index: 10;
+}
+
+#content-home nav a.books {
+	color: #00AB69;
+}
+
+#content-home nav a.work {
+	color: #5186C7;
+}
+
+#content-home nav a.shop {
+	color: #FF5760;
+}
+
+#content-home nav a.newsletter {
+	color: #FF8446;
+}
+
+#content-home nav a.about {
+	color: #FFA2CC;
+}
+
+#content-home nav a.books img {
+	width: 150px;
+  top: -50px;
+  left: -107px;
+}
+
+#content-home nav a.work img {
+	width: 150px;
+  top: -50px;
+  right: -90px;
+}
+
+#content-home nav a.shop img {
+	width: 150px;
+  top: -50px;
+  left: -107px;
+}
+
+#content-home nav a.newsletter img {
+	width: 150px;
+  top: -75px;
+  right: -60px;
+}
+
+#content-home nav a.about img {
+	width: 90px;
+  top: -20px;
+  left: -70px;
+}
+
+#content-home nav a span {
+ 	font-size: 72px;
+ 	position: relative;
+ 	z-index: 11;
 }
 
 #content-category {
