@@ -40,6 +40,9 @@ return [
 
     'copy' => [
         public_path('build') => 'build',
+        public_path('assets') => 'assets', // your raw images, PDFs, etc.
+        public_path('build')  => 'build',  // Vite output
+        public_path('img')    => 'img',    // Glide cache (if used)
     ],
 
     'symlinks' => [
