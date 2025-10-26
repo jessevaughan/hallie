@@ -1,22 +1,15 @@
-<header>
-  <p>Logo</p>
-  <h1>Hallie Bateman</h1>
-</header>
+{{ partial:hero-page}}
 
-<section id="content-category">
-  <nav>
-    <a href="/books">Books</a>
-    <a href="/work">Work</a>
-    <a href="#">Shop</a>
-    <a href="/newsletter">Newsletter</a>
-    <a href="/about">About</a>
-  </nav>
-</section>
-
-<footer>
-  <ul>
-    <li><a href="#">Bluesky</a></li>
-    <li><a href="#">Instagram</a></li>
-    <li><a href="#">Substack</a></li>
+<section id="body-content-index">
+  {{ partial:sub-nav}}
+  <ul id="body-work">
+    {{ collection:books }}
+    <li>
+      <a href="/books/{{ slug }}" class="image-link">
+        <img src="assets/img/brave-new-work.png">
+        <span class="overlay-text">{{ title }}</span>
+      </a>
+    </li>
+    {{ /collection:books }}
   </ul>
-</footer>
+</section>

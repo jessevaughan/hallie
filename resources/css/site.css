@@ -1,20 +1,18 @@
 @source "../views";
 @source "../../content";
 
-/* Example with Jost */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&display=swap');
-
 .display-black {
-  font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "polymath", sans-serif;
   font-weight: 900;
-  letter-spacing: -0.02em; /* mimic Polymath Display’s tighter spacing */
-  text-transform: uppercase; /* optional, for that logo/poster feel */
 }
 
 body {
 	background: #FCF9F4;
-	font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: #494949;
+	font-family: "polymath", sans-serif;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -28,6 +26,34 @@ header img {
 
 header h1 {
 	display: none;
+}
+
+header#hero-page {
+	padding: 15px 0;
+}
+
+header#hero-page.books {
+	background: #00AB69;
+}
+
+header#hero-page.work {
+	background: #FF8446;
+}
+
+header#hero-page.shop {
+	background: #5186C7;
+}
+
+header#hero-page.newsletter {
+	background: #FF5760;
+}
+
+header#hero-page.about {
+	background: #FFA2CC;
+}
+
+header#hero-page img {
+	width: 100px;
 }
 
 footer {
@@ -77,7 +103,7 @@ footer ul li span {
  	display: inline-block;
  	margin: 15px 0;
  	position: relative;
- 	font-family: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ 	font-family: "polymath", sans-serif;
   font-weight: 900;
   letter-spacing: -0.02em; /* mimic Polymath Display’s tighter spacing */
   text-transform: uppercase; /* optional, for that logo/poster feel */
@@ -163,4 +189,111 @@ footer ul li span {
  	display: inline-block;
  	font-size: 16px;
  	margin: 15px 0;
+}
+
+#body-content-index {
+	margin: 2rem;
+	padding: 2rem;
+	background: white;
+	border-radius: 25px;
+}
+
+nav#sub-nav {
+	font-family: "polymath", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+nav#sub-nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2.25rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+nav#sub-nav li {
+}
+
+nav#sub-nav a {
+	font-size: 21px;
+	text-transform: uppercase;
+	color: #494949;
+	text-decoration: none;
+}
+
+nav#sub-nav a.books.active {
+	color: #00AB69;
+}
+
+nav#sub-nav a.work.active {
+	color: #FF8446;
+}
+
+nav#sub-nav a.shop.active {
+	color: #5186C7;
+}
+
+nav#sub-nav a.newsletter.active {
+	color: #FF5760;
+}
+
+nav#sub-nav a.about.active {
+	color: #FFA2CC;
+}
+
+#body-work {
+	list-style: none;
+	border-radius: 25px;
+}
+
+#body-work li {
+	
+}
+
+#body-work a {
+	
+}
+
+#body-work img {
+	border-radius: 25px;
+}
+
+.image-link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-link img {
+  display: block;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.image-link .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  pointer-events: none; /* keeps the link clickable through the text */
+}
+
+.image-link:hover img {
+  opacity: 0.7;
+  filter: brightness(70%);
+}
+
+.image-link:hover .overlay-text {
+  opacity: 1;
+}
+
+#work-content-block {
+	max-width: 750px;
+	margin: 0 auto;
 }

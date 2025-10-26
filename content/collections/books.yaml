@@ -1,0 +1,7 @@
+title: Books
+template: books-content
+revisions: false
+date_behavior:
+  past: public
+  future: private
+route: '/books/{slug}'
