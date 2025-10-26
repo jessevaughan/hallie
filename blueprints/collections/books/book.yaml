@@ -18,6 +18,8 @@ tabs:
               container: assets
               type: assets
               display: 'Featured Image'
+              max_files: 1
+              min_files: 1
           -
             handle: content
             field:
