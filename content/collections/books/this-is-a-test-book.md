@@ -5,6 +5,8 @@ title: 'This Is A Test Book'
 author: ad196ac7-bbfd-4883-9886-8a0740557700
 template: books-content
 updated_by: ad196ac7-bbfd-4883-9886-8a0740557700
-updated_at: 1761517510
+updated_at: 1761520437
+featured_image:
+  - brave-new-work.png
 ---
 This is content for that book

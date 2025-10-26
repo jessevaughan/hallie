@@ -6,7 +6,7 @@
     {{ collection:books }}
     <li>
       <a href="/books/{{ slug }}" class="image-link">
-        <img src="assets/img/brave-new-work.png">
+        <img src="{{ featured_image:url }}">
         <span class="overlay-text">{{ title }}</span>
       </a>
     </li>

@@ -103,9 +103,9 @@ footer ul li span {
  	display: inline-block;
  	margin: 15px 0;
  	position: relative;
- 	font-family: "polymath", sans-serif;
-  font-weight: 900;
-  letter-spacing: -0.02em; /* mimic Polymath Display’s tighter spacing */
+ 	font-family: "polymath-display", sans-serif;
+	font-weight: 800;
+	font-style: normal;
   text-transform: uppercase; /* optional, for that logo/poster feel */
   text-decoration: none;
 }
@@ -140,37 +140,38 @@ footer ul li span {
 }
 
 #content-home nav a.books img {
-	width: 150px;
+	width: 175px;
   top: -50px;
-  left: -107px;
+  left: -127px;
 }
 
 #content-home nav a.work img {
-	width: 150px;
+	width: 175px;
   top: -50px;
-  right: -90px;
+  right: -100px;
 }
 
 #content-home nav a.shop img {
-	width: 150px;
-  top: -50px;
-  left: -107px;
+	width: 175px;
+  top: -55px;
+  left: -117px;
 }
 
 #content-home nav a.newsletter img {
-	width: 150px;
-  top: -75px;
+	width: 200px;
+  top: -110px;
   right: -60px;
 }
 
 #content-home nav a.about img {
-	width: 90px;
+	width: 115px;
   top: -20px;
-  left: -70px;
+  left: -90px;
 }
 
 #content-home nav a span {
- 	font-size: 72px;
+ 	font-size: 100px;
+ 	line-height: 112px;
  	position: relative;
  	z-index: 11;
 }
